@@ -20,7 +20,10 @@ body {
     line-height: 1.6;
     font-size: 1.05rem;
     background-image: linear-gradient(rgba(34, 48, 74, .05) 1px, transparent 1px);
-    background-size: 100% 34px
+    background-size: 100% 34px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column
 }
 
 h1,
@@ -41,9 +44,14 @@ a {
 }
 
 .wrap {
+    width: 100%;
     max-width: 1040px;
     margin: 0 auto;
     padding: 0 20px
+}
+
+main {
+    flex: 1
 }
 
 nav {
@@ -300,6 +308,18 @@ h2:after {
 .team:target {
     background: var(--ball);
     transform: rotate(-1deg)
+}
+
+.team img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid var(--ink);
+    box-shadow: 3px 3px 0 var(--ink);
+    object-fit: cover;
+    margin-bottom: 12px;
+    display: block;
+    background: var(--chalk)
 }
 
 .team h3 {
