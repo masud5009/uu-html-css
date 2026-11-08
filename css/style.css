@@ -229,16 +229,7 @@ section + section {
 
 h2 {
     font-size: 2rem;
-    margin-bottom: 24px
-}
-
-h2:after {
-    content: "";
-    display: block;
-    width: 110px;
-    height: 5px;
-    margin-top: 6px;
-    background: repeating-linear-gradient(90deg, var(--brick) 0 14px, transparent 14px 20px)
+    margin-bottom: 20px;
 }
 
 .board {
@@ -325,7 +316,7 @@ th {
 
 td {
     padding: 10px;
-    border-bottom: 2px dashed rgba(34, 48, 74, .3)
+    border-bottom: 1px solid rgba(34, 48, 74, .2);
 }
 
 tr:nth-child(1) td {
