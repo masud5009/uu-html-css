@@ -77,6 +77,11 @@ nav .wrap {
     color: var(--ball)
 }
 
+.nav-toggle,
+.nav-btn {
+    display: none;
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -576,6 +581,75 @@ footer {
 }
 
 @media(max-width:768px) {
+    .nav-btn {
+        display: block;
+        font-size: 1.4rem;
+        cursor: pointer;
+        user-select: none;
+        color: var(--chalk);
+        line-height: 1;
+        padding: 5px 9px;
+        border: 2px solid var(--chalk);
+        border-radius: 6px;
+    }
+
+    .nav-btn .close-icon {
+        display: none;
+    }
+
+    .nav-toggle:checked + .nav-btn {
+        background: var(--ball);
+        color: var(--ink);
+        border-color: var(--ball);
+    }
+
+    .nav-toggle:checked + .nav-btn .open-icon {
+        display: none;
+    }
+
+    .nav-toggle:checked + .nav-btn .close-icon {
+        display: inline;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 4px;
+        padding: 10px 0 6px 0;
+        margin-top: 6px;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .nav-toggle:checked ~ ul {
+        display: flex;
+    }
+
+    nav li > a {
+        padding: 10px 14px;
+        background: rgba(255, 255, 255, 0.05);
+        font-size: 1rem;
+    }
+
+    nav li > a:hover,
+    nav a.on {
+        background: var(--ball);
+        color: var(--ink);
+    }
+
+    .dd {
+        position: static;
+        box-shadow: none;
+        padding: 4px 0 6px 14px;
+        background: transparent;
+    }
+
+    .dd a {
+        padding: 8px 12px;
+        background: rgba(255, 255, 255, 0.04);
+        margin: 3px 0;
+    }
+
     .about-grid {
         grid-template-columns: 1fr;
         gap: 22px
