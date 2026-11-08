@@ -106,34 +106,6 @@ nav a.on {
     color: var(--ink)
 }
 
-.dd {
-    display: none;
-    position: absolute;
-    right: 0;
-    top: 100%;
-    background: var(--ink);
-    border-radius: 8px;
-    padding: 6px;
-    min-width: 190px;
-    box-shadow: 0 8px 0 rgba(0, 0, 0, .15)
-}
-
-.dd a {
-    display: block;
-    text-decoration: none;
-    padding: 6px 10px;
-    border-radius: 6px
-}
-
-.dd a:hover {
-    background: var(--brick)
-}
-
-li:hover>.dd,
-li:focus-within>.dd {
-    display: block
-}
-
 .hero {
     position: relative;
     overflow: hidden;
@@ -311,11 +283,6 @@ h2:after {
     padding: 20px;
     box-shadow: 5px 5px 0 var(--ink);
     border-top: 12px solid var(--c)
-}
-
-.team:target {
-    background: var(--ball);
-    transform: rotate(-1deg)
 }
 
 .team img {
@@ -635,19 +602,6 @@ footer {
     nav a.on {
         background: var(--ball);
         color: var(--ink);
-    }
-
-    .dd {
-        position: static;
-        box-shadow: none;
-        padding: 4px 0 6px 14px;
-        background: transparent;
-    }
-
-    .dd a {
-        padding: 8px 12px;
-        background: rgba(255, 255, 255, 0.04);
-        margin: 3px 0;
     }
 
     .about-grid {
