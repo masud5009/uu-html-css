@@ -243,7 +243,11 @@ li:focus-within>.dd {
 }
 
 section {
-    margin: 46px 0
+    margin: 46px 0;
+}
+
+section + section {
+    margin-top: 76px;
 }
 
 h2 {
@@ -556,70 +560,19 @@ footer {
 .about-text p {
     font-size: 1.05rem;
     line-height: 1.65;
-    margin-bottom: 18px
-}
-
-.about-highlights {
-    display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-    margin-top: 16px
-}
-
-.highlight-item {
-    background: var(--chalk);
-    border: 2px solid var(--ink);
-    border-radius: 6px;
-    padding: 8px 14px;
-    box-shadow: 3px 3px 0 var(--ink);
-    display: flex;
-    flex-direction: column
-}
-
-.highlight-item b {
-    font-family: 'Permanent Marker', cursive;
-    font-size: 1.15rem;
-    color: var(--brick);
-    line-height: 1.1
-}
-
-.highlight-item span {
-    font-size: .82rem;
-    color: var(--ink);
-    font-weight: 700
 }
 
 .about-media {
-    background: var(--chalk);
-    border: 3px solid var(--ink);
-    border-radius: 6px;
-    box-shadow: 6px 6px 0 var(--ink);
+    border-radius: 8px;
     overflow: hidden;
-    position: relative;
-    transition: transform .15s ease, box-shadow .15s ease
-}
-
-.about-media:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: 8px 8px 0 var(--ink)
+    box-shadow: 0 4px 14px rgba(34, 48, 74, 0.12);
 }
 
 .about-media img {
     width: 100%;
-    height: 240px;
+    height: 250px;
     object-fit: cover;
     display: block;
-    border-bottom: 3px solid var(--ink)
-}
-
-.media-caption {
-    display: block;
-    padding: 9px 12px;
-    font-size: .88rem;
-    font-weight: 700;
-    color: var(--ink);
-    background: var(--chalk);
-    text-align: center
 }
 
 @media(max-width:768px) {
@@ -630,6 +583,10 @@ footer {
 }
 
 @media(max-width:600px) {
+    section + section {
+        margin-top: 50px;
+    }
+
     .gallery-grid {
         grid-template-columns: 1fr;
         gap: 22px
