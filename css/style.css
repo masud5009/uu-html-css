@@ -270,7 +270,7 @@ section + section {
     top: 50%;
     transform: translateY(-50%);
     z-index: 99;
-    width: 220px;
+    width: 260px;
     background: var(--chalk);
     border: 3px solid var(--ink);
     border-top: 8px solid var(--brick);
