@@ -249,7 +249,8 @@ section + section {
     align-items: center;
     text-align: center;
     border: 4px solid var(--chalk);
-    box-shadow: 6px 6px 0 var(--brick)
+    box-shadow: 6px 6px 0 var(--brick);
+    margin-bottom: 22px
 }
 
 .board h3 {
