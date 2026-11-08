@@ -33,16 +33,11 @@ h3 {
 }
 
 h2 {
-    font-weight: 800;
+    font-family: 'Karla', Arial, sans-serif;
+    font-weight: 700;
     font-size: 2rem;
-}
-.about-text h2,
-.dev h2,
-.points-table h2,
-.fixtures h2,
-.departments h2{
-    margin-bottom: 15px;
-    font-weight: 800 !important;
+    margin-bottom: 20px;
+    line-height: 1.25
 }
 a {
     color: inherit
@@ -406,19 +401,6 @@ tr:nth-child(1) td {
     padding: 0 10px;
     border-radius: 99px;
     font-size: .9rem
-}
-
-details {
-    background: var(--chalk);
-    border: 3px solid var(--ink);
-    border-radius: 6px;
-    padding: 12px 16px;
-    margin-bottom: 12px
-}
-
-summary {
-    cursor: pointer;
-    font-weight: 700
 }
 
 footer {
