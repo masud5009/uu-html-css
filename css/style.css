@@ -263,6 +263,105 @@ section + section {
     color: var(--ball)
 }
 
+/* Floating Live Match Widget */
+.live-widget {
+    position: fixed;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 99;
+    width: 220px;
+    background: var(--chalk);
+    border: 3px solid var(--ink);
+    border-top: 8px solid var(--brick);
+    border-radius: 8px;
+    box-shadow: 5px 5px 0 var(--ink);
+    padding: 12px 14px;
+}
+
+.live-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--brick);
+    color: var(--chalk);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.live-dot {
+    width: 7px;
+    height: 7px;
+    background: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    animation: live-pulse 1.4s infinite ease-in-out;
+}
+
+@keyframes live-pulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+}
+
+.live-match {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.2rem;
+    color: var(--ink);
+    line-height: 1.2;
+    margin-bottom: 2px;
+}
+
+.live-score {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.live-score .live-ov {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: #555;
+    margin-left: 4px;
+}
+
+.live-details {
+    background: rgba(34, 48, 74, 0.05);
+    border: 1px solid rgba(34, 48, 74, 0.15);
+    border-radius: 4px;
+    padding: 7px 9px;
+    font-size: 0.82rem;
+    line-height: 1.45;
+}
+
+.live-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+}
+
+.live-row + .live-row {
+    margin-top: 5px;
+    padding-top: 5px;
+    border-top: 1px dashed rgba(34, 48, 74, 0.18);
+}
+
+.live-sep {
+    color: #888;
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
@@ -275,8 +374,21 @@ section + section {
     border-radius: 6px;
     padding: 20px;
     box-shadow: 5px 5px 0 var(--ink);
-    border-top: 12px solid var(--c)
+    border-top: 12px solid var(--brick);
 }
+
+/* Department card top border colors (teams.html) */
+#cse { border-top-color: #B8452B; }
+#eee { border-top-color: #2E6FA3; }
+#bba { border-top-color: #7A4FA0; }
+#civil { border-top-color: #C98A12; }
+#textile { border-top-color: #3F7D4E; }
+#eng { border-top-color: #D0527A; }
+
+/* Developer card top border colors (about.html) */
+.dev-1 { border-top-color: #B8452B; }
+.dev-2 { border-top-color: #2E6FA3; }
+.dev-3 { border-top-color: #3F7D4E; }
 
 .team img {
     width: 80px;
@@ -293,7 +405,8 @@ section + section {
 
 .team .meta {
     font-size: .95rem;
-    opacity: .8
+    opacity: .8;
+    margin: 4px 0 8px
 }
 
 .team ul {
@@ -616,5 +729,15 @@ footer {
 
     .stumps {
         right: 16px
+    }
+}
+
+@media(max-width:1100px) {
+    .live-widget {
+        position: static;
+        transform: none;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto 30px auto;
     }
 }
