@@ -137,7 +137,7 @@ nav a.on {
 
 .hero h1 {
     font-size: 3.5rem;
-    transform: rotate(-2deg);
+    rotate: -2deg;
     max-width: 640px;
     animation: fadeUpTitle 0.8s ease-out both;
 }
@@ -152,11 +152,11 @@ nav a.on {
 @keyframes fadeUpTitle {
     from {
         opacity: 0;
-        transform: translateY(25px) rotate(-2deg);
+        translate: 0 25px;
     }
     to {
         opacity: 1;
-        transform: translateY(0) rotate(-2deg);
+        translate: 0 0;
     }
 }
 
