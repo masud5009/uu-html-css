@@ -390,6 +390,10 @@ section + section {
 .dev-2 { border-top-color: #2E6FA3; }
 .dev-3 { border-top-color: #3F7D4E; }
 
+.dev-1 .role { color: #B8452B; }
+.dev-2 .role { color: #2E6FA3; }
+.dev-3 .role { color: #3F7D4E; }
+
 .team img {
     width: 80px;
     height: 80px;
@@ -403,10 +407,21 @@ section + section {
     font-size: 1.5rem
 }
 
+.team .role {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 4px 0 2px;
+}
+
 .team .meta {
     font-size: .95rem;
     opacity: .8;
-    margin: 4px 0 8px
+    margin: 2px 0 8px
+}
+
+.team .contrib {
+    font-size: .95rem;
+    line-height: 1.55;
 }
 
 .team ul {
