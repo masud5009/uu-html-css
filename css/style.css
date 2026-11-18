@@ -115,6 +115,11 @@ h2 em {
     background: rgba(15, 51, 38, .08);
     color: var(--uu-pitch);
     font-size: 1.35rem;
+    transition: transform .4s ease;
+}
+
+.rule-card:hover .rule-icon {
+    transform: rotateY(180deg);
 }
 
 /* ---------- about / feature split ---------- */
