@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Team Registration | Uttara University Premier League</title>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Karla:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="wrap"><a class="logo" href="index.html">UU Premier League</a>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-btn" aria-label="Toggle Menu">
+                <span class="open-icon">☰</span>
+                <span class="close-icon">✕</span>
+            </label>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="teams.html">Departments</a></li>
+                <li><a href="rules.html">Rules</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="wrap">
+        <section>
+            <h2>Team Registration</h2>
+            <form class="form-card" action="#" method="get">
+                <label for="team-name">Team name</label>
+                <input type="text" id="team-name" name="team-name" placeholder="e.g. CSE Strikers" required>
+
+                <label for="department">Department</label>
+                <select id="department" name="department" required>
+                    <option value="" selected disabled>Select your department</option>
+                    <option value="cse">CSE</option>
+                    <option value="eee">EEE</option>
+                    <option value="bba">BBA</option>
+                    <option value="civil">Civil</option>
+                    <option value="textile">Textile</option>
+                    <option value="eng">English</option>
+                </select>
+
+                <label for="captain">Captain name</label>
+                <input type="text" id="captain" name="captain" placeholder="Full name" required>
+
+                <label for="email">Contact email</label>
+                <input type="email" id="email" name="email" placeholder="you@uttarauniversity.edu.bd" required>
+
+                <label for="phone">Contact phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="01XXXXXXXXX" required>
+
+                <label for="players">Number of players</label>
+                <input type="number" id="players" name="players" min="7" max="12" placeholder="7" required>
+
+                <label for="notes">Squad notes (optional)</label>
+                <textarea id="notes" name="notes" placeholder="Any extra info about your squad..."></textarea>
+
+                <button class="btn" type="submit">Submit Registration</button>
+            </form>
+        </section>
+    </main>
+    <footer>&copy; 2026 Uttara University Premier League · A University Project</footer>
+</body>
+
+</html>
