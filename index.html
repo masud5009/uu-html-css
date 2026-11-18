@@ -41,11 +41,11 @@
     <main class="flex-grow-1">
 
         <!-- Hero -->
-        <header class="bg-pitch pt-5" data-bs-theme="dark">
+        <header class="bg-pitch pt-5 pb-5" data-bs-theme="dark">
             <div class="container pt-lg-5 pb-5 mb-5">
                 <div class="row align-items-center g-5">
                     <div class="col-lg-6" data-aos="fade-up">
-                        <h1 class="display-3 mb-4">Six teams. <em class="text-brass">One trophy.</em></h1>
+                        <h1 class="display-3 mb-4">Fourteen teams. <em class="text-brass">One trophy.</em></h1>
                         <p class="lead text-body-secondary mb-4">The Uttara University Premier League is our annual inter-department tournament. Follow every department, match and point from the first ball to the final.</p>
                         <div class="d-flex flex-wrap gap-2 mb-5">
                             <a class="btn btn-brass btn-lg" href="#fixtures">See fixtures</a>
@@ -114,7 +114,12 @@
         </div>
 
         <!-- Next up -->
-        <section class="py-5">
+        <div class="text-center mt-4 mb-2" data-aos="fade-in">
+            <a class="scroll-cue d-inline-flex align-items-center justify-content-center" href="#next-up" aria-label="Scroll down to the next section">
+                <i class="bi bi-chevron-down"></i>
+            </a>
+        </div>
+        <section class="py-5" id="next-up">
             <div class="container">
                 <h2 class="fs-2 mb-4" data-aos="fade-up">Next on the field</h2>
                 <div class="row g-4">
@@ -256,7 +261,7 @@
         <section class="py-5 bg-body-tertiary">
             <div class="container">
                 <div class="d-flex flex-wrap justify-content-between align-items-end gap-2 mb-4" data-aos="fade-up">
-                    <h2 class="fs-2 mb-0">Meet the six teams</h2>
+                    <h2 class="fs-2 mb-0">Meet the fourteen teams</h2>
                     <a href="teams.html" class="fw-semibold">See every captain and squad <i class="bi bi-arrow-right"></i></a>
                 </div>
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
@@ -452,15 +457,24 @@
         </section>
 
         <!-- Call to action -->
-        <section class="bg-brass py-5">
-            <div class="container py-lg-2">
-                <div class="row align-items-center g-3" data-aos="fade-up">
-                    <div class="col-lg-8">
-                        <h2 class="display-6 mb-1">Bring your squad.</h2>
-                        <p class="mb-0 fs-5">Captains can register a team in a couple of minutes. Read the rules first.</p>
-                    </div>
-                    <div class="col-lg-4 text-lg-end">
-                        <a class="btn btn-primary btn-lg" href="register.html">Register your team</a>
+        <section class="py-5">
+            <div class="container">
+                <div class="cta-banner overflow-hidden" data-aos="fade-up">
+                    <div class="row align-items-center g-0">
+                        <div class="col-lg-6 p-4 p-lg-5">
+                            <p class="eyebrow mb-3">Join the UUPL</p>
+                            <h2 class="display-5 mb-3">Bring your squad.</h2>
+                            <p class="text-body-secondary col-lg-10 mb-4">Captains can register a team in a couple of minutes. Read the rules first.</p>
+                            <a class="btn btn-primary btn-lg rounded-pill px-4 d-inline-flex align-items-center gap-2" href="register.html">
+                                Register your team
+                                <span class="cta-arrow"><i class="bi bi-arrow-right"></i></span>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 pb-4 pb-lg-0">
+                            <div class="cta-photo mx-auto">
+                                <img src="images/uu-campus-building.webp" alt="Uttara University permanent campus building" class="object-fit-cover" loading="lazy">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

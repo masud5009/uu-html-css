@@ -15,6 +15,12 @@ $(function () {
         $nav.toggleClass('scrolled', $(window).scrollTop() > 8);
     }).trigger('scroll');
 
+    // Smooth-scroll for the scroll-down cue under the hero
+    $('.scroll-cue').on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top - 16 }, 500);
+    });
+
     // Count-up for the headline numbers on the home page
     $('[data-count]').each(function () {
         var $el = $(this);

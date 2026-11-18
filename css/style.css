@@ -25,17 +25,36 @@
 }
 
 /* AOS slides elements in from the side; stop that causing a horizontal scrollbar */
-main { overflow-x: clip; }
+main {
+    overflow-x: clip;
+}
 
 /* ---------- type ---------- */
-h1, h2, h3, h4, .font-display {
+h1,
+h2,
+h3,
+h4,
+.font-display {
     font-family: 'Oswald', 'Arial Narrow', sans-serif;
     font-weight: 700;
     letter-spacing: .01em;
 }
-h1, h2 { text-transform: uppercase; line-height: 1.15; }
-h3, h4 { font-weight: 500; }
-h1 em, h2 em { font-style: normal; }
+
+h1,
+h2 {
+    text-transform: uppercase;
+    line-height: 1.15;
+}
+
+h3,
+h4 {
+    font-weight: 500;
+}
+
+h1 em,
+h2 em {
+    font-style: normal;
+}
 
 .eyebrow {
     font-size: .75rem;
@@ -45,26 +64,43 @@ h1 em, h2 em { font-style: normal; }
     color: var(--uu-brass-dark);
 }
 
-.text-brass { color: var(--uu-brass); }
-.bg-brass { background: var(--uu-brass); color: var(--uu-pitch); }
-.text-brass-dark { color: var(--uu-brass-dark); }
-.hand { font-style: italic; font-size: .85rem; color: #555; }
+.text-brass {
+    color: var(--uu-brass);
+}
+
+.text-brass-dark {
+    color: var(--uu-brass-dark);
+}
+
+.hand {
+    font-style: italic;
+    font-size: .85rem;
+    color: #555;
+}
 
 /* ---------- dark pitch sections (paired with data-bs-theme="dark") ---------- */
 .bg-pitch {
     color: var(--bs-body-color);
-    background: repeating-linear-gradient(90deg, #0f3326 0 4.5rem, #12392b 4.5rem 9rem); /* mown stripes */
+    background: repeating-linear-gradient(90deg, #0f3326 0 4.5rem, #12392b 4.5rem 9rem);
+    /* mown stripes */
 }
-.bg-pitch .eyebrow { color: var(--uu-brass); }
+
+.bg-pitch .eyebrow {
+    color: var(--uu-brass);
+}
 
 /* ---------- tinted section with white icon cards ---------- */
-.bg-tint { background: #eef4ef; }
+.bg-tint {
+    background: #eef4ef;
+}
+
 .rule-card {
     background: #fff;
     border-radius: .75rem;
     padding: 1.5rem;
     box-shadow: 0 1px 2px rgba(15, 51, 38, .06);
 }
+
 .rule-icon {
     flex: none;
     display: inline-flex;
@@ -78,8 +114,77 @@ h1 em, h2 em { font-style: normal; }
     font-size: 1.35rem;
 }
 
+/* ---------- rounded CTA banner ---------- */
+.cta-banner {
+    background: #eef4ef;
+    border-radius: 1.25rem;
+}
+
+.cta-photo {
+    width: 100%;
+    max-width: 28rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 50% 50% 50% 0 / 62% 62% 38% 0;
+    /* organic drop shape like the reference */
+    overflow: hidden;
+}
+
+.cta-photo img {
+    width: 100%;
+    height: 100%;
+}
+
+.cta-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .22);
+    font-size: .9rem;
+}
+
+/* ---------- scroll-down cue ---------- */
+.scroll-cue {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid rgba(15, 51, 38, .15);
+    color: var(--uu-pitch);
+    font-size: 1.25rem;
+    box-shadow: 0 2px 8px rgba(15, 51, 38, .12);
+    transition: background .2s, color .2s, transform .2s;
+}
+
+.scroll-cue:hover {
+    background: var(--uu-pitch);
+    color: #fff;
+    transform: translateY(2px);
+}
+
+.scroll-cue i {
+    animation: cue-bounce 1.6s ease-in-out infinite;
+}
+
+@keyframes cue-bounce {
+
+    0%,
+    100% {
+        transform: translateY(-2px);
+    }
+
+    50% {
+        transform: translateY(3px);
+    }
+}
+
 /* ---------- buttons ---------- */
-.btn { --bs-btn-font-weight: 600; }
+.btn {
+    --bs-btn-font-weight: 600;
+}
+
 .btn-primary {
     --bs-btn-bg: var(--uu-pitch);
     --bs-btn-border-color: var(--uu-pitch);
@@ -88,6 +193,7 @@ h1 em, h2 em { font-style: normal; }
     --bs-btn-active-bg: #1a4d39;
     --bs-btn-active-border-color: #1a4d39;
 }
+
 .btn-brass {
     --bs-btn-color: var(--uu-pitch);
     --bs-btn-bg: var(--uu-brass);
@@ -101,16 +207,30 @@ h1 em, h2 em { font-style: normal; }
 }
 
 /* ---------- nav pills & form focus (Bootstrap hard-codes its blue here) ---------- */
-.nav-pills { --bs-nav-pills-link-active-bg: var(--uu-pitch); }
-.form-control:focus, .form-select:focus {
+.nav-pills {
+    --bs-nav-pills-link-active-bg: var(--uu-pitch);
+}
+
+.form-control:focus,
+.form-select:focus {
     border-color: var(--uu-brass);
     box-shadow: 0 0 0 .25rem rgba(201, 162, 74, .3);
 }
 
 /* ---------- navbar ---------- */
-.navbar { transition: box-shadow .2s; }
-.navbar-brand { text-transform: uppercase; letter-spacing: .04em; }
-.navbar.scrolled { box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .3); }
+.navbar {
+    transition: box-shadow .2s;
+}
+
+.navbar-brand {
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+.navbar.scrolled {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .3);
+}
+
 .mark {
     border: 1px solid var(--uu-brass);
     color: var(--uu-brass);
@@ -118,7 +238,11 @@ h1 em, h2 em { font-style: normal; }
     font-size: .95rem;
     line-height: 1.5;
 }
-.navbar .nav-link.active { color: var(--uu-brass); box-shadow: inset 0 -2px var(--uu-brass); }
+
+.navbar .nav-link.active {
+    color: var(--uu-brass);
+    box-shadow: inset 0 -2px var(--uu-brass);
+}
 
 /* ---------- signature details ---------- */
 /* photo prints, pinned slightly askew */
@@ -127,14 +251,31 @@ h1 em, h2 em { font-style: normal; }
     padding: .6rem .6rem .5rem;
     box-shadow: 0 .8rem 1.6rem rgba(0, 0, 0, .35);
 }
-.print img { display: block; width: 100%; }
-.print-a { transform: rotate(-2.5deg); }
-.print-b { transform: rotate(3deg); }
+
+.print img {
+    display: block;
+    width: 100%;
+}
+
+.print-a {
+    transform: rotate(-2.5deg);
+}
+
+.print-b {
+    transform: rotate(3deg);
+}
 
 /* seam of a cricket ball */
-hr.stitch { border: 0; border-top: 2px dashed #a63a2c; opacity: .45; margin: 1rem 0; }
+hr.stitch {
+    border: 0;
+    border-top: 2px dashed #a63a2c;
+    opacity: .45;
+    margin: 1rem 0;
+}
 
-.pull-up { margin-top: -3.5rem; }
+.pull-up {
+    margin-top: -3.5rem;
+}
 
 .live-dot {
     display: inline-block;
@@ -144,19 +285,53 @@ hr.stitch { border: 0; border-top: 2px dashed #a63a2c; opacity: .45; margin: 1re
     background: #d6483a;
     animation: pulse 1.4s infinite;
 }
-@keyframes pulse { 50% { opacity: .25; } }
 
-.card-lift { transition: transform .2s, border-color .2s; }
-.card-lift:hover { transform: translateY(-3px); border-color: var(--uu-brass); }
+@keyframes pulse {
+    50% {
+        opacity: .25;
+    }
+}
 
-.table { font-variant-numeric: tabular-nums; }
-.progress { --bs-progress-height: .4rem; }
-.sticky-offset { top: 5.5rem; }
-.rule-no { width: 4.5rem; }
-.zoom img { transition: transform .5s; }
-.zoom:hover img { transform: scale(1.06); }
+.card-lift {
+    transition: transform .2s, border-color .2s;
+}
+
+.card-lift:hover {
+    transform: translateY(-3px);
+    border-color: var(--uu-brass);
+}
+
+.table {
+    font-variant-numeric: tabular-nums;
+}
+
+.progress {
+    --bs-progress-height: .4rem;
+}
+
+.sticky-offset {
+    top: 5.5rem;
+}
+
+.rule-no {
+    width: 4.5rem;
+}
+
+.zoom img {
+    transition: transform .5s;
+}
+
+.zoom:hover img {
+    transform: scale(1.06);
+}
 
 @media (prefers-reduced-motion: reduce) {
-    .live-dot { animation: none; }
-    .zoom img, .card-lift { transition: none; }
+    .live-dot {
+        animation: none;
+    }
+
+    .zoom img,
+    .card-lift {
+        transition: none;
+    }
 }
