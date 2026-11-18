@@ -44,6 +44,7 @@ h1,
 h2 {
     text-transform: uppercase;
     line-height: 1.15;
+    font-weight: 900 !important;
 }
 
 h3,
@@ -77,7 +78,9 @@ h2 em {
     font-size: .85rem;
     color: #555;
 }
-
+.hero-section .btn{
+    font-size: 1.10rem;
+}
 /* ---------- dark pitch sections (paired with data-bs-theme="dark") ---------- */
 .bg-pitch {
     color: var(--bs-body-color);
