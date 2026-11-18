@@ -3,70 +3,162 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0f3326">
     <title>Rules | Uttara University Premier League</title>
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Karla:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
-    <nav>
-        <div class="wrap"><a class="logo" href="index.html">UU Premier League</a>
-            <input type="checkbox" id="nav-toggle" class="nav-toggle">
-            <label for="nav-toggle" class="nav-btn" aria-label="Toggle Menu">
-                <span class="open-icon">☰</span>
-                <span class="close-icon">✕</span>
-            </label>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="teams.html">Departments</a></li>
-                <li><a href="rules.html" class="on">Rules</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
+<body class="d-flex flex-column min-vh-100">
+
+    <nav class="navbar navbar-expand-lg bg-pitch sticky-top" data-bs-theme="dark">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2 font-display" href="index.html">
+                <span class="mark">UU</span> Premier League
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto me-lg-3">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="teams.html">Departments</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="rules.html">Rules</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                </ul>
+                <a class="btn btn-brass btn-sm" href="register.html">Register team</a>
+            </div>
         </div>
     </nav>
-    <main class="wrap">
-        <section>
-            <h2>Official League Rules</h2>
-            <div class="rules-list">
-                <article class="rule-item">
-                    <h3>1. Match Format &amp; Overs</h3>
-                    <p>Each innings is 8 overs played with a red-taped tennis ball. 7 active players per department with unlimited rolling substitutions.</p>
-                </article>
-                <article class="rule-item">
-                    <h3>2. Campus Boundary &amp; Window Law</h3>
-                    <p>Hitting the ball directly into campus academic windows, lab glass, or department balconies is an immediate <strong>OUT</strong>. The batter must retrieve the ball.</p>
-                </article>
-                <article class="rule-item">
-                    <h3>3. One-Tip, One-Hand Catch</h3>
-                    <p>If the ball rebounds once off a campus boundary wall, corridor pillar, or grill, a clean one-handed catch is declared OUT by the umpire.</p>
-                </article>
-                <article class="rule-item">
-                    <h3>4. Bowling &amp; Pace Limit</h3>
-                    <p>Maximum 2 overs per bowler with a strict 5-step short run-up. High bouncers above chest height are called no-ball immediately.</p>
-                </article>
-                <article class="rule-item">
-                    <h3>5. Lost Ball Protocol</h3>
-                    <p>If the ball gets stuck under campus vehicles or into drains, play pauses. Both departments must search. If unrecoverable, batting side provides the new tape ball.</p>
-                </article>
-                <article class="rule-item">
-                    <h3>6. Last Man Standing</h3>
-                    <p>When 6 wickets fall, the lone batter may bat alone. Runs can only be scored in pairs (2s, 4s, 6s) or by completing a full round-trip sprint.</p>
-                </article>
-                <article class="rule-item">
-                    <h3>7. Faculty &amp; Pedestrian Pause</h3>
-                    <p>When university faculty, campus visitors, or campus vehicles cross the field pathway, dead-ball is signaled immediately. Zero arguments allowed.</p>
-                </article>
-                <article class="rule-item">
-                    <h3>8. Points &amp; Standings</h3>
-                    <p>2 points awarded for a win, 0 for a loss. Tied matches are decided by a 1-over Super Over. Net Run Rate (NRR) determines department standings ties.</p>
-                </article>
+
+    <main class="flex-grow-1">
+
+        <header class="bg-pitch py-5" data-bs-theme="dark">
+            <div class="container py-lg-3">
+                <h1 class="display-4 mb-0">Official League Rules</h1>
+            </div>
+        </header>
+
+        <section class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-4 order-lg-2">
+                    <aside class="card sticky-lg-top sticky-offset">
+                        <div class="card-body p-4">
+                            <p class="eyebrow mb-3">At a glance</p>
+                            <dl class="row mb-0 gy-3">
+                                <dt class="col-8 fw-normal">Overs per innings</dt><dd class="col-4 text-end font-display fs-4 mb-0">8</dd>
+                                <dt class="col-8 fw-normal">Players a side</dt><dd class="col-4 text-end font-display fs-4 mb-0">7</dd>
+                                <dt class="col-8 fw-normal">Overs per bowler</dt><dd class="col-4 text-end font-display fs-4 mb-0">2</dd>
+                                <dt class="col-8 fw-normal">Points for a win</dt><dd class="col-4 text-end font-display fs-4 mb-0">2</dd>
+                            </dl>
+                            <hr class="stitch">
+                            <a class="btn btn-primary w-100" href="register.html">Register your team</a>
+                        </div>
+                    </aside>
+                </div>
+                <div class="col-lg-8 order-lg-1">
+                    <div class="border-bottom">
+                    <article class="row g-3 py-4 border-top" data-aos="fade-up">
+                        <div class="col-auto rule-no"><span class="font-display display-5 text-brass lh-1">01</span></div>
+                        <div class="col">
+                            <h2 class="h4">Match Format &amp; Overs</h2>
+                            <p class="mb-0">Each innings is 8 overs played with a red-taped tennis ball. 7 active players per department with unlimited rolling substitutions.</p>
+                        </div>
+                    </article>
+                    <article class="row g-3 py-4 border-top" data-aos="fade-up">
+                        <div class="col-auto rule-no"><span class="font-display display-5 text-brass lh-1">02</span></div>
+                        <div class="col">
+                            <h2 class="h4">Campus Boundary &amp; Window Law</h2>
+                            <p class="mb-0">Hitting the ball directly into campus academic windows, lab glass, or department balconies is an immediate <strong>OUT</strong>. The batter must retrieve the ball.</p>
+                        </div>
+                    </article>
+                    <article class="row g-3 py-4 border-top" data-aos="fade-up">
+                        <div class="col-auto rule-no"><span class="font-display display-5 text-brass lh-1">03</span></div>
+                        <div class="col">
+                            <h2 class="h4">One-Tip, One-Hand Catch</h2>
+                            <p class="mb-0">If the ball rebounds once off a campus boundary wall, corridor pillar, or grill, a clean one-handed catch is declared OUT by the umpire.</p>
+                        </div>
+                    </article>
+                    <article class="row g-3 py-4 border-top" data-aos="fade-up">
+                        <div class="col-auto rule-no"><span class="font-display display-5 text-brass lh-1">04</span></div>
+                        <div class="col">
+                            <h2 class="h4">Bowling &amp; Pace Limit</h2>
+                            <p class="mb-0">Maximum 2 overs per bowler with a strict 5-step short run-up. High bouncers above chest height are called no-ball immediately.</p>
+                        </div>
+                    </article>
+                    <article class="row g-3 py-4 border-top" data-aos="fade-up">
+                        <div class="col-auto rule-no"><span class="font-display display-5 text-brass lh-1">05</span></div>
+                        <div class="col">
+                            <h2 class="h4">Lost Ball Protocol</h2>
+                            <p class="mb-0">If the ball gets stuck under campus vehicles or into drains, play pauses. Both departments must search. If unrecoverable, batting side provides the new tape ball.</p>
+                        </div>
+                    </article>
+                    <article class="row g-3 py-4 border-top" data-aos="fade-up">
+                        <div class="col-auto rule-no"><span class="font-display display-5 text-brass lh-1">06</span></div>
+                        <div class="col">
+                            <h2 class="h4">Last Man Standing</h2>
+                            <p class="mb-0">When 6 wickets fall, the lone batter may bat alone. Runs can only be scored in pairs (2s, 4s, 6s) or by completing a full round-trip sprint.</p>
+                        </div>
+                    </article>
+                    <article class="row g-3 py-4 border-top" data-aos="fade-up">
+                        <div class="col-auto rule-no"><span class="font-display display-5 text-brass lh-1">07</span></div>
+                        <div class="col">
+                            <h2 class="h4">Faculty &amp; Pedestrian Pause</h2>
+                            <p class="mb-0">When university faculty, campus visitors, or campus vehicles cross the field pathway, dead-ball is signaled immediately. Zero arguments allowed.</p>
+                        </div>
+                    </article>
+                    <article class="row g-3 py-4 border-top" data-aos="fade-up">
+                        <div class="col-auto rule-no"><span class="font-display display-5 text-brass lh-1">08</span></div>
+                        <div class="col">
+                            <h2 class="h4">Points &amp; Standings</h2>
+                            <p class="mb-0">2 points awarded for a win, 0 for a loss. Tied matches are decided by a 1-over Super Over. Net Run Rate (NRR) determines department standings ties.</p>
+                        </div>
+                    </article>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-    <footer>&copy; 2026 Uttara University Premier League · A University Project</footer>
+
+    <footer class="bg-pitch pt-5 pb-4" data-bs-theme="dark">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-5">
+                    <a class="d-inline-flex align-items-center gap-2 font-display fs-5 text-uppercase text-decoration-none text-body" href="index.html"><span class="mark">UU</span> Premier League</a>
+                    <p class="text-body-secondary mt-3 mb-0 col-lg-9">The annual inter-department tennis-ball cricket tournament of Uttara University.</p>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <p class="eyebrow mb-3">Explore</p>
+                    <ul class="list-unstyled mb-0">
+                        <li><a class="link-light link-underline-opacity-0 link-underline-opacity-75-hover" href="teams.html">Departments</a></li>
+                        <li><a class="link-light link-underline-opacity-0 link-underline-opacity-75-hover" href="rules.html">Rules</a></li>
+                        <li><a class="link-light link-underline-opacity-0 link-underline-opacity-75-hover" href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <p class="eyebrow mb-3">Take part</p>
+                    <ul class="list-unstyled mb-0">
+                        <li><a class="link-light link-underline-opacity-0 link-underline-opacity-75-hover" href="register.html">Register a team</a></li>
+                        <li><a class="link-light link-underline-opacity-0 link-underline-opacity-75-hover" href="about.html">About the project</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-secondary mt-4">
+            <p class="small text-body-secondary mb-0">&copy; 2026 Uttara University Premier League &middot; A University Project</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

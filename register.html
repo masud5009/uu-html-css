@@ -3,68 +3,156 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0f3326">
     <title>Team Registration | Uttara University Premier League</title>
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Karla:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
-    <nav>
-        <div class="wrap"><a class="logo" href="index.html">UU Premier League</a>
-            <input type="checkbox" id="nav-toggle" class="nav-toggle">
-            <label for="nav-toggle" class="nav-btn" aria-label="Toggle Menu">
-                <span class="open-icon">☰</span>
-                <span class="close-icon">✕</span>
-            </label>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="teams.html">Departments</a></li>
-                <li><a href="rules.html">Rules</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
+<body class="d-flex flex-column min-vh-100">
+
+    <nav class="navbar navbar-expand-lg bg-pitch sticky-top" data-bs-theme="dark">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2 font-display" href="index.html">
+                <span class="mark">UU</span> Premier League
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto me-lg-3">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="teams.html">Departments</a></li>
+                    <li class="nav-item"><a class="nav-link" href="rules.html">Rules</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                </ul>
+                <a class="btn btn-brass btn-sm" href="register.html">Register team</a>
+            </div>
         </div>
     </nav>
-    <main class="wrap">
-        <section>
-            <h2>Team Registration</h2>
-            <form class="form-card" action="#" method="get">
-                <label for="team-name">Team name</label>
-                <input type="text" id="team-name" name="team-name" placeholder="e.g. CSE Strikers" required>
 
-                <label for="department">Department</label>
-                <select id="department" name="department" required>
-                    <option value="" selected disabled>Select your department</option>
-                    <option value="cse">CSE</option>
-                    <option value="eee">EEE</option>
-                    <option value="bba">BBA</option>
-                    <option value="civil">Civil</option>
-                    <option value="textile">Textile</option>
-                    <option value="eng">English</option>
-                </select>
+    <main class="flex-grow-1">
 
-                <label for="captain">Captain name</label>
-                <input type="text" id="captain" name="captain" placeholder="Full name" required>
+        <header class="bg-pitch py-5" data-bs-theme="dark">
+            <div class="container py-lg-3">
+                <h1 class="display-4 mb-0">Team Registration</h1>
+            </div>
+        </header>
 
-                <label for="email">Contact email</label>
-                <input type="email" id="email" name="email" placeholder="you@uttarauniversity.edu.bd" required>
-
-                <label for="phone">Contact phone</label>
-                <input type="tel" id="phone" name="phone" placeholder="01XXXXXXXXX" required>
-
-                <label for="players">Number of players</label>
-                <input type="number" id="players" name="players" min="7" max="12" placeholder="7" required>
-
-                <label for="notes">Squad notes (optional)</label>
-                <textarea id="notes" name="notes" placeholder="Any extra info about your squad..."></textarea>
-
-                <button class="btn" type="submit">Submit Registration</button>
-            </form>
+        <section class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-4" data-aos="fade-right">
+                    <h2 class="h3 mb-3">What you will need</h2>
+                    <ul class="list-unstyled mb-4">
+                        <li class="d-flex gap-2 mb-2"><i class="bi bi-check2 text-success"></i> A team name and department</li>
+                        <li class="d-flex gap-2 mb-2"><i class="bi bi-check2 text-success"></i> Your captain's name</li>
+                        <li class="d-flex gap-2 mb-2"><i class="bi bi-check2 text-success"></i> A squad of 7 to 12 players</li>
+                        <li class="d-flex gap-2 mb-2"><i class="bi bi-check2 text-success"></i> An email and phone number we can reach</li>
+                    </ul>
+                    <p class="small text-body-secondary mb-0">Matches are 8 overs a side with 7 players on the field. Have a look at the <a href="rules.html">rules</a> first.</p>
+                </div>
+                <div class="col-lg-8" data-aos="fade-left">
+                    <div class="card">
+                        <div class="card-body p-4 p-md-5">
+                            <form id="register-form" class="row g-3" novalidate>
+                                <div class="col-md-6">
+                                    <label for="team-name" class="form-label">Team name</label>
+                                    <input type="text" class="form-control" id="team-name" name="team-name" placeholder="e.g. CSE Strikers" required>
+                                    <div class="invalid-feedback">Give your team a name.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="department" class="form-label">Department</label>
+                                    <select class="form-select" id="department" name="department" required>
+                                        <option value="" selected disabled>Select your department</option>
+                                        <option value="cse">CSE</option>
+                                        <option value="eee">EEE</option>
+                                        <option value="bba">BBA</option>
+                                        <option value="civil">Civil</option>
+                                        <option value="textile">Textile</option>
+                                        <option value="eng">English</option>
+                                    </select>
+                                    <div class="invalid-feedback">Choose a department.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="captain" class="form-label">Captain name</label>
+                                    <input type="text" class="form-control" id="captain" name="captain" placeholder="Full name" required>
+                                    <div class="invalid-feedback">Enter the captain's name.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="players" class="form-label">Number of players</label>
+                                    <input type="number" class="form-control" id="players" name="players" min="7" max="12" placeholder="7 to 12" required>
+                                    <div class="invalid-feedback">A squad needs 7 to 12 players.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Contact email</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="you@uttarauniversity.edu.bd" required>
+                                    <div class="invalid-feedback">Enter a valid email address.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="phone" class="form-label">Contact phone</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="01XXXXXXXXX" pattern="01[0-9]{9}" required>
+                                    <div class="invalid-feedback">Use an 11-digit number starting with 01.</div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="notes" class="form-label">Squad notes <span class="text-body-secondary fw-normal">(optional)</span></label>
+                                    <textarea class="form-control" id="notes" name="notes" rows="3" placeholder="Anything we should know about your squad?"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary btn-lg" type="submit">Submit registration</button>
+                                </div>
+                            </form>
+                            <div id="register-done" class="text-center py-4 d-none" role="status">
+                                <i class="bi bi-check-circle display-4 text-success"></i>
+                                <h2 class="h3 mt-3">Registration received</h2>
+                                <p class="mb-4">Thanks, <strong class="js-captain"></strong>. <strong class="js-team"></strong> is on our list and we will contact you with fixture details.</p>
+                                <button type="button" class="btn btn-outline-dark js-again">Register another team</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
-    <footer>&copy; 2026 Uttara University Premier League · A University Project</footer>
+
+    <footer class="bg-pitch pt-5 pb-4" data-bs-theme="dark">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-5">
+                    <a class="d-inline-flex align-items-center gap-2 font-display fs-5 text-uppercase text-decoration-none text-body" href="index.html"><span class="mark">UU</span> Premier League</a>
+                    <p class="text-body-secondary mt-3 mb-0 col-lg-9">The annual inter-department tennis-ball cricket tournament of Uttara University.</p>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <p class="eyebrow mb-3">Explore</p>
+                    <ul class="list-unstyled mb-0">
+                        <li><a class="link-light link-underline-opacity-0 link-underline-opacity-75-hover" href="teams.html">Departments</a></li>
+                        <li><a class="link-light link-underline-opacity-0 link-underline-opacity-75-hover" href="rules.html">Rules</a></li>
+                        <li><a class="link-light link-underline-opacity-0 link-underline-opacity-75-hover" href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <p class="eyebrow mb-3">Take part</p>
+                    <ul class="list-unstyled mb-0">
+                        <li><a class="link-light link-underline-opacity-0 link-underline-opacity-75-hover" href="register.html">Register a team</a></li>
+                        <li><a class="link-light link-underline-opacity-0 link-underline-opacity-75-hover" href="about.html">About the project</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-secondary mt-4">
+            <p class="small text-body-secondary mb-0">&copy; 2026 Uttara University Premier League &middot; A University Project</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

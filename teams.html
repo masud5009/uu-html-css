@@ -3,98 +3,195 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0f3326">
     <title>Departments | Uttara University Premier League</title>
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Karla:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
-    <nav>
-        <div class="wrap"><a class="logo" href="index.html">UU Premier League</a>
-            <input type="checkbox" id="nav-toggle" class="nav-toggle">
-            <label for="nav-toggle" class="nav-btn" aria-label="Toggle Menu">
-                <span class="open-icon">☰</span>
-                <span class="close-icon">✕</span>
-            </label>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="teams.html" class="on">Departments</a></li>
-                <li><a href="rules.html">Rules</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
+<body class="d-flex flex-column min-vh-100">
+
+    <nav class="navbar navbar-expand-lg bg-pitch sticky-top" data-bs-theme="dark">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2 font-display" href="index.html">
+                <span class="mark">UU</span> Premier League
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto me-lg-3">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="teams.html">Departments</a></li>
+                    <li class="nav-item"><a class="nav-link" href="rules.html">Rules</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                </ul>
+                <a class="btn btn-brass btn-sm" href="register.html">Register team</a>
+            </div>
         </div>
     </nav>
-    <main class="wrap">
-        <section class="departments">
-            <h2>The six departments</h2>
-            <div class="grid">
-                <article class="team" id="cse">
-                    <h3>CSE Strikers</h3>
-                    <p class="meta">Captain: Masud Rana · Dept. of CSE</p>
-                    <p>Tech strategists with fierce fast bowlers and a fearless batting lineup.</p>
-                    <ul>
-                        <li>Played: 3</li>
-                        <li>Won: 2</li>
-                        <li>Lost: 1</li>
-                    </ul>
-                </article>
-                <article class="team" id="eee">
-                    <h3>EEE Dynamos</h3>
-                    <p class="meta">Captain: Nabil Hasan · Dept. of EEE</p>
-                    <p>High-voltage all-rounders who squeeze the middle overs with tight bowling.</p>
-                    <ul>
-                        <li>Played: 3</li>
-                        <li>Won: 1</li>
-                        <li>Lost: 2</li>
-                    </ul>
-                </article>
-                <article class="team" id="bba">
-                    <h3>BBA Gladiators</h3>
-                    <p class="meta">Captain: Tanvir Alam · School of Business</p>
-                    <p>Master calculators and the most clinical chasing squad on campus.</p>
-                    <ul>
-                        <li>Played: 3</li>
-                        <li>Won: 2</li>
-                        <li>Lost: 1</li>
-                    </ul>
-                </article>
-                <article class="team" id="civil">
-                    <h3>Civil Tigers</h3>
-                    <p class="meta">Captain: Sakib Mia · Dept. of Civil Engg.</p>
-                    <p>Rock-solid foundation with disciplined pacers and razor-sharp ground fielding.</p>
-                    <ul>
-                        <li>Played: 3</li>
-                        <li>Won: 2</li>
-                        <li>Lost: 1</li>
-                    </ul>
-                </article>
-                <article class="team" id="textile">
-                    <h3>Textile Warriors</h3>
-                    <p class="meta">Captain: Imran Khan · Dept. of Textile Engg.</p>
-                    <p>Hard-hitting powerhouses who consistently clear the campus boundary ropes.</p>
-                    <ul>
-                        <li>Played: 3</li>
-                        <li>Won: 1</li>
-                        <li>Lost: 2</li>
-                    </ul>
-                </article>
-                <article class="team" id="eng">
-                    <h3>English Mavericks</h3>
-                    <p class="meta">Captain: Zahid Rony · Dept. of English</p>
-                    <p>Dynamic young squad with aggressive stroke-play and a passionate bowling unit.</p>
-                    <ul>
-                        <li>Played: 3</li>
-                        <li>Won: 1</li>
-                        <li>Lost: 2</li>
-                    </ul>
-                </article>
+
+    <main class="flex-grow-1">
+
+        <header class="bg-pitch py-5" data-bs-theme="dark">
+            <div class="container py-lg-3">
+                <h1 class="display-4 mb-0">Our Six Departments</h1>
+            </div>
+        </header>
+
+        <section class="container py-5">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <div class="col" data-aos="fade-up" data-aos-delay="0">
+                    <article class="card h-100" id="cse">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h2 class="h3">CSE Strikers</h2>
+                            <p class="small text-body-secondary mb-3">Captain Masud Rana &middot; Dept. of CSE</p>
+                            <p class="mb-4">Tech strategists with fierce fast bowlers and a fearless batting lineup.</p>
+                            <hr class="stitch mt-auto">
+                            <div class="row text-center mb-3">
+                                <div class="col"><div class="font-display fs-3 lh-1">3</div><div class="small text-body-secondary">Played</div></div>
+                                <div class="col"><div class="font-display fs-3 lh-1 text-success">2</div><div class="small text-body-secondary">Won</div></div>
+                                <div class="col"><div class="font-display fs-3 lh-1 text-danger">1</div><div class="small text-body-secondary">Lost</div></div>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Win rate" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar bg-success" style="width: 67%"></div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col" data-aos="fade-up" data-aos-delay="100">
+                    <article class="card h-100" id="eee">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h2 class="h3">EEE Dynamos</h2>
+                            <p class="small text-body-secondary mb-3">Captain Nabil Hasan &middot; Dept. of EEE</p>
+                            <p class="mb-4">High-voltage all-rounders who squeeze the middle overs with tight bowling.</p>
+                            <hr class="stitch mt-auto">
+                            <div class="row text-center mb-3">
+                                <div class="col"><div class="font-display fs-3 lh-1">3</div><div class="small text-body-secondary">Played</div></div>
+                                <div class="col"><div class="font-display fs-3 lh-1 text-success">1</div><div class="small text-body-secondary">Won</div></div>
+                                <div class="col"><div class="font-display fs-3 lh-1 text-danger">2</div><div class="small text-body-secondary">Lost</div></div>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Win rate" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar bg-success" style="width: 33%"></div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col" data-aos="fade-up" data-aos-delay="200">
+                    <article class="card h-100" id="bba">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h2 class="h3">BBA Gladiators</h2>
+                            <p class="small text-body-secondary mb-3">Captain Tanvir Alam &middot; School of Business</p>
+                            <p class="mb-4">Master calculators and the most clinical chasing squad on campus.</p>
+                            <hr class="stitch mt-auto">
+                            <div class="row text-center mb-3">
+                                <div class="col"><div class="font-display fs-3 lh-1">3</div><div class="small text-body-secondary">Played</div></div>
+                                <div class="col"><div class="font-display fs-3 lh-1 text-success">2</div><div class="small text-body-secondary">Won</div></div>
+                                <div class="col"><div class="font-display fs-3 lh-1 text-danger">1</div><div class="small text-body-secondary">Lost</div></div>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Win rate" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar bg-success" style="width: 67%"></div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col" data-aos="fade-up" data-aos-delay="0">
+                    <article class="card h-100" id="civil">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h2 class="h3">Civil Tigers</h2>
+                            <p class="small text-body-secondary mb-3">Captain Sakib Mia &middot; Dept. of Civil Engg.</p>
+                            <p class="mb-4">Rock-solid foundation with disciplined pacers and razor-sharp ground fielding.</p>
+                            <hr class="stitch mt-auto">
+                            <div class="row text-center mb-3">
+                                <div class="col"><div class="font-display fs-3 lh-1">3</div><div class="small text-body-secondary">Played</div></div>
+                                <div class="col"><div class="font-display fs-3 lh-1 text-success">2</div><div class="small text-body-secondary">Won</div></div>
+                                <div class="col"><div class="font-display fs-3 lh-1 text-danger">1</div><div class="small text-body-secondary">Lost</div></div>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Win rate" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar bg-success" style="width: 67%"></div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col" data-aos="fade-up" data-aos-delay="100">
+                    <article class="card h-100" id="textile">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h2 class="h3">Textile Warriors</h2>
+                            <p class="small text-body-secondary mb-3">Captain Imran Khan &middot; Dept. of Textile Engg.</p>
+                            <p class="mb-4">Hard-hitting powerhouses who consistently clear the campus boundary ropes.</p>
+                            <hr class="stitch mt-auto">
+                            <div class="row text-center mb-3">
+                                <div class="col"><div class="font-display fs-3 lh-1">3</div><div class="small text-body-secondary">Played</div></div>
+                                <div class="col"><div class="font-display fs-3 lh-1 text-success">1</div><div class="small text-body-secondary">Won</div></div>
+                                <div class="col"><div class="font-display fs-3 lh-1 text-danger">2</div><div class="small text-body-secondary">Lost</div></div>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Win rate" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar bg-success" style="width: 33%"></div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col" data-aos="fade-up" data-aos-delay="200">
+                    <article class="card h-100" id="eng">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h2 class="h3">English Mavericks</h2>
+                            <p class="small text-body-secondary mb-3">Captain Zahid Rony &middot; Dept. of English</p>
+                            <p class="mb-4">Dynamic young squad with aggressive stroke-play and a passionate bowling unit.</p>
+                            <hr class="stitch mt-auto">
+                            <div class="row text-center mb-3">
+                                <div class="col"><div class="font-display fs-3 lh-1">3</div><div class="small text-body-secondary">Played</div></div>
+                                <div class="col"><div class="font-display fs-3 lh-1 text-success">1</div><div class="small text-body-secondary">Won</div></div>
+                                <div class="col"><div class="font-display fs-3 lh-1 text-danger">2</div><div class="small text-body-secondary">Lost</div></div>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Win rate" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar bg-success" style="width: 33%"></div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
     </main>
-    <footer>&copy; 2026 Uttara University Premier League · A University Project</footer>
+
+    <footer class="bg-pitch pt-5 pb-4" data-bs-theme="dark">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-5">
+                    <a class="d-inline-flex align-items-center gap-2 font-display fs-5 text-uppercase text-decoration-none text-body" href="index.html"><span class="mark">UU</span> Premier League</a>
+                    <p class="text-body-secondary mt-3 mb-0 col-lg-9">The annual inter-department tennis-ball cricket tournament of Uttara University.</p>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <p class="eyebrow mb-3">Explore</p>
+                    <ul class="list-unstyled mb-0">
+                        <li><a class="link-light link-underline-opacity-0 link-underline-opacity-75-hover" href="teams.html">Departments</a></li>
+                        <li><a class="link-light link-underline-opacity-0 link-underline-opacity-75-hover" href="rules.html">Rules</a></li>
+                        <li><a class="link-light link-underline-opacity-0 link-underline-opacity-75-hover" href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <p class="eyebrow mb-3">Take part</p>
+                    <ul class="list-unstyled mb-0">
+                        <li><a class="link-light link-underline-opacity-0 link-underline-opacity-75-hover" href="register.html">Register a team</a></li>
+                        <li><a class="link-light link-underline-opacity-0 link-underline-opacity-75-hover" href="about.html">About the project</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-secondary mt-4">
+            <p class="small text-body-secondary mb-0">&copy; 2026 Uttara University Premier League &middot; A University Project</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
