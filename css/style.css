@@ -296,6 +296,32 @@ h2 em {
     --bs-nav-pills-link-active-bg: var(--uu-pitch);
 }
 
+/* fixture rounds: segmented control on a soft track */
+.nav-pills.round-tabs {
+    display: inline-flex;
+    background: rgba(15, 51, 38, .06);
+    border-radius: 999px;
+    padding: .35rem;
+    gap: .25rem;
+}
+
+.round-tabs .nav-link {
+    border-radius: 999px;
+    padding: .35rem 1.1rem;
+    font-size: .9rem;
+    color: var(--uu-pitch);
+    transition: color .2s, background-color .2s;
+}
+
+.round-tabs .nav-link:hover {
+    color: var(--uu-pitch);
+}
+
+.round-tabs .nav-link.active {
+    color: #fff;
+    box-shadow: 0 2px 6px rgba(15, 51, 38, .25);
+}
+
 .form-control:focus,
 .form-select:focus {
     border-color: var(--uu-brass);
