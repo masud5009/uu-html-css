@@ -387,6 +387,27 @@ hr.stitch {
     }
 }
 
+/* live-ticker batting stats chip */
+.live-stats {
+    background: rgba(15, 51, 38, .05);
+    border: 1px solid rgba(15, 51, 38, .08);
+    border-radius: .6rem;
+    padding: .45rem .9rem;
+}
+
+.live-stats .vr {
+    opacity: .18;
+}
+
+.live-stat-label {
+    font-size: .62rem;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--uu-brass-dark);
+    line-height: 1.1;
+}
+
 .card-lift {
     transition: transform .2s, border-color .2s;
 }
