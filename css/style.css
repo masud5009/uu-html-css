@@ -3,9 +3,9 @@
    this file only sets the palette, the type and a few signature details. */
 
 :root {
-    --uu-pitch: #0f3326;
-    --uu-brass: #c9a24a;
-    --uu-brass-dark: #85651b;
+    --primary-color: #0f3326;
+    --secondary-color: #c9a24a;
+    --secondary-dark: #85651b;
 
     --bs-body-font-family: 'Poppins', system-ui, sans-serif;
     --bs-body-bg: #fff;
@@ -14,12 +14,11 @@
     --bs-border-radius-lg: .4rem;
 
     /* swap Bootstrap's stock green/red for the club colours */
-    --bs-primary: var(--uu-pitch);
     --bs-primary-rgb: 15, 51, 38;
     --bs-success-rgb: 31, 107, 77;
     --bs-danger-rgb: 166, 58, 44;
-    --bs-link-color: var(--uu-pitch);
-    --bs-link-hover-color: var(--uu-brass-dark);
+    --bs-link-color: var(--primary-color);
+    --bs-link-hover-color: var(--secondary-dark);
     --bs-link-color-rgb: 15, 51, 38;
     --bs-link-hover-color-rgb: 133, 101, 27;
 }
@@ -62,15 +61,21 @@ h2 em {
     font-weight: 600;
     letter-spacing: .15em;
     text-transform: uppercase;
-    color: var(--uu-brass-dark);
+    color: var(--secondary-dark);
 }
 
+.text-primary-color {
+    color: var(--primary-color) !important;
+}
+
+.text-secondary-color,
 .text-brass {
-    color: var(--uu-brass);
+    color: var(--secondary-color) !important;
 }
 
+.text-secondary-dark,
 .text-brass-dark {
-    color: var(--uu-brass-dark);
+    color: var(--secondary-dark) !important;
 }
 
 .hand {
@@ -84,12 +89,12 @@ h2 em {
 /* ---------- dark pitch sections (paired with data-bs-theme="dark") ---------- */
 .bg-pitch {
     color: var(--bs-body-color);
-    background: repeating-linear-gradient(90deg, #0f3326 0 4.5rem, #12392b 4.5rem 9rem);
+    background: repeating-linear-gradient(90deg, var(--primary-color) 0 4.5rem, #12392b 4.5rem 9rem);
     /* mown stripes */
 }
 
 .bg-pitch .eyebrow {
-    color: var(--uu-brass);
+    color: var(--secondary-color);
 }
 
 /* ---------- tinted section with white icon cards ---------- */
@@ -113,7 +118,7 @@ h2 em {
     height: 3.25rem;
     border-radius: 50%;
     background: rgba(15, 51, 38, .08);
-    color: var(--uu-pitch);
+    color: var(--primary-color);
     font-size: 1.35rem;
     transition: transform .4s ease;
 }
@@ -185,7 +190,7 @@ h2 em {
     gap: 1.25rem;
 }
 .check-list i {
-    color: var(--uu-pitch);
+    color: var(--primary-color);
     font-size: 1.35rem;
     line-height: 1.3;
 }
@@ -214,7 +219,7 @@ h2 em {
 }
 
 .cta-photo img {
-    width: 75%;
+    width: 70%;
     height: auto;
     object-fit: contain;
     filter: drop-shadow(0 14px 28px rgba(18, 48, 38, 0.09));
@@ -290,7 +295,7 @@ h2 em {
 .match-team-name {
     font-size: 1.12rem;
     font-weight: 800;
-    color: var(--uu-pitch);
+    color: var(--primary-color);
     letter-spacing: -.01em;
     margin-bottom: 0;
 }
@@ -325,7 +330,7 @@ h2 em {
 
 .match-time i {
     font-size: .95rem;
-    color: var(--uu-brass-dark);
+    color: var(--secondary-dark);
 }
 
 @media (max-width: 576px) {
@@ -360,14 +365,14 @@ h2 em {
     border-radius: 50%;
     background: #fff;
     border: 1px solid rgba(15, 51, 38, .15);
-    color: var(--uu-pitch);
+    color: var(--primary-color);
     font-size: 1.25rem;
     box-shadow: 0 2px 8px rgba(15, 51, 38, .12);
     transition: background .2s, color .2s, transform .2s;
 }
 
 .scroll-cue:hover {
-    background: var(--uu-pitch);
+    background: var(--primary-color);
     color: #fff;
     transform: translateY(2px);
 }
@@ -394,8 +399,8 @@ h2 em {
 }
 
 .btn-primary {
-    --bs-btn-bg: var(--uu-pitch);
-    --bs-btn-border-color: var(--uu-pitch);
+    --bs-btn-bg: var(--primary-color);
+    --bs-btn-border-color: var(--primary-color);
     --bs-btn-hover-bg: #1a4d39;
     --bs-btn-hover-border-color: #1a4d39;
     --bs-btn-active-bg: #1a4d39;
@@ -403,20 +408,20 @@ h2 em {
 }
 
 .btn-brass {
-    --bs-btn-color: var(--uu-pitch);
-    --bs-btn-bg: var(--uu-brass);
-    --bs-btn-border-color: var(--uu-brass);
-    --bs-btn-hover-color: var(--uu-pitch);
+    --bs-btn-color: var(--primary-color);
+    --bs-btn-bg: var(--secondary-color);
+    --bs-btn-border-color: var(--secondary-color);
+    --bs-btn-hover-color: var(--primary-color);
     --bs-btn-hover-bg: #d9b765;
     --bs-btn-hover-border-color: #d9b765;
-    --bs-btn-active-color: var(--uu-pitch);
+    --bs-btn-active-color: var(--primary-color);
     --bs-btn-active-bg: #d9b765;
     --bs-btn-active-border-color: #d9b765;
 }
 
 /* ---------- nav pills & form focus (Bootstrap hard-codes its blue here) ---------- */
 .nav-pills {
-    --bs-nav-pills-link-active-bg: var(--uu-pitch);
+    --bs-nav-pills-link-active-bg: var(--primary-color);
 }
 
 /* fixture rounds: segmented control on a soft track */
@@ -432,12 +437,12 @@ h2 em {
     border-radius: 999px;
     padding: .35rem 1.1rem;
     font-size: .9rem;
-    color: var(--uu-pitch);
+    color: var(--primary-color);
     transition: color .2s, background-color .2s;
 }
 
 .round-tabs .nav-link:hover {
-    color: var(--uu-pitch);
+    color: var(--primary-color);
 }
 
 .round-tabs .nav-link.active {
@@ -448,7 +453,7 @@ h2 em {
 /* project developer cards */
 .dev-card {
     border: 0;
-    border-top: 3px solid var(--uu-brass);
+    border-top: 3px solid var(--secondary-color);
     transition: transform .25s ease, box-shadow .25s ease;
 }
 
@@ -463,7 +468,7 @@ h2 em {
     border-radius: 50%;
     padding: .25rem;
     background: #fff;
-    border: 3px solid var(--uu-brass);
+    border: 3px solid var(--secondary-color);
     box-shadow: 0 4px 12px rgba(15, 51, 38, .15);
 }
 
@@ -484,12 +489,12 @@ h2 em {
     font-weight: 700;
     letter-spacing: .08em;
     text-transform: uppercase;
-    color: var(--uu-brass-dark);
+    color: var(--secondary-dark);
 }
 
 .form-control:focus,
 .form-select:focus {
-    border-color: var(--uu-brass);
+    border-color: var(--secondary-color);
     box-shadow: 0 0 0 .25rem rgba(201, 162, 74, .3);
 }
 
@@ -508,16 +513,16 @@ h2 em {
 }
 
 .mark {
-    border: 1px solid var(--uu-brass);
-    color: var(--uu-brass);
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
     padding: 0 .35rem;
     font-size: .95rem;
     line-height: 1.5;
 }
 
 .navbar .nav-link.active {
-    color: var(--uu-brass);
-    box-shadow: inset 0 -2px var(--uu-brass);
+    color: var(--secondary-color);
+    box-shadow: inset 0 -2px var(--secondary-color);
 }
 
 /* footer nav: breathing room between links */
@@ -622,7 +627,7 @@ hr.stitch {
     font-weight: 600;
     letter-spacing: .12em;
     text-transform: uppercase;
-    color: var(--uu-brass-dark);
+    color: var(--secondary-dark);
     line-height: 1.1;
 }
 
@@ -632,7 +637,7 @@ hr.stitch {
 
 .card-lift:hover {
     transform: translateY(-3px);
-    border-color: var(--uu-brass);
+    border-color: var(--secondary-color);
 }
 
 .table {
