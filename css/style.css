@@ -208,15 +208,16 @@ h2 em {
 .cta-photo {
     width: 100%;
     max-width: 28rem;
-    aspect-ratio: 1 / 1;
-    border-radius: 50% 50% 50% 0 / 62% 62% 38% 0;
-    /* organic drop shape like the reference */
-    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .cta-photo img {
-    width: 100%;
-    height: 100%;
+    width: 75%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 14px 28px rgba(18, 48, 38, 0.09));
 }
 
 .cta-arrow {
