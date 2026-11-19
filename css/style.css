@@ -218,6 +218,22 @@ h2 em {
     height: auto;
     object-fit: contain;
     filter: drop-shadow(0 14px 28px rgba(18, 48, 38, 0.09));
+    animation: cta-float 5s ease-in-out infinite;
+}
+
+@keyframes cta-float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-9px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cta-photo img {
+        animation: none;
+    }
 }
 
 .cta-arrow {
