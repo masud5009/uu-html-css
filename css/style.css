@@ -439,10 +439,37 @@ h2 em {
 
 .print-a {
     transform: rotate(-2.5deg);
+    animation: print-float-a 6s ease-in-out infinite;
 }
 
 .print-b {
     transform: rotate(3deg);
+    animation: print-float-b 7s ease-in-out infinite;
+}
+
+@keyframes print-float-a {
+    0%, 100% {
+        transform: rotate(-2.5deg) translateY(0);
+    }
+    50% {
+        transform: rotate(-2.5deg) translateY(-8px);
+    }
+}
+
+@keyframes print-float-b {
+    0%, 100% {
+        transform: rotate(3deg) translateY(0);
+    }
+    50% {
+        transform: rotate(3deg) translateY(-10px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .print-a,
+    .print-b {
+        animation: none;
+    }
 }
 
 /* seam of a cricket ball */
